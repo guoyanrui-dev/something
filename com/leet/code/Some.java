@@ -45,7 +45,14 @@ public class Some {
             System.out.println(new String(ch));
         }
     }
-
+    @Test
+    public static void getTest() throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("data\\test.csv"));
+        String strings;
+        while ((strings=bufferedReader.readLine())!=null){
+            System.out.println(strings);
+        }
+    }
     public static void main(String[] args) {
         int[] nums = {21, 43, 3, 657, 67, 8, 32, 8, 9, 9765, 654, 43436};
         paixu(nums, 0, nums.length - 1);
