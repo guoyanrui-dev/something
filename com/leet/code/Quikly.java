@@ -20,7 +20,7 @@ public class Quikly {
                     flag = true;
                 }
             }
-            if (flag==false) break;
+            if (flag == false) break;
         }
     }
 
@@ -47,6 +47,24 @@ public class Quikly {
         quiklySort(nums, i + 1, right);
     }
 
+    //选择排序
+    public static void selectSort(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] < nums[min]) {
+                    min = j;
+                }
+
+            }
+            if (min != i) {
+                int temp = nums[i];
+                nums[i] = nums[min];
+                nums[min] = temp;
+            }
+        }
+    }
+
     //输出九九乘法表
     @Test
     public static void jiu() {
@@ -60,8 +78,9 @@ public class Quikly {
 
     public static void main(String[] args) {
         int[] nums = {1, 543, 32, 32, 12, 2, 3, 4, 5, 678998, 788};
-        bobble(nums);
+//        bobble(nums);
 //        quiklySort(nums, 0, nums.length - 1);
+        selectSort(nums);
         System.out.println(Arrays.toString(nums));
     }
 }
