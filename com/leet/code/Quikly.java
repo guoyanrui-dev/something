@@ -10,14 +10,17 @@ import java.util.Arrays;
 public class Quikly {
     //冒泡
     public static void bobble(int[] nums) {
+        boolean flag = false;
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = 0; j < nums.length - 1 - i; j++) {
                 if (nums[j + 1] < nums[j]) {
                     int temp = nums[j];
                     nums[j] = nums[j + 1];
                     nums[j + 1] = temp;
+                    flag = true;
                 }
             }
+            if (flag==false) break;
         }
     }
 
@@ -57,8 +60,8 @@ public class Quikly {
 
     public static void main(String[] args) {
         int[] nums = {1, 543, 32, 32, 12, 2, 3, 4, 5, 678998, 788};
-//        bobble(nums);
-        quiklySort(nums, 0, nums.length - 1);
+        bobble(nums);
+//        quiklySort(nums, 0, nums.length - 1);
         System.out.println(Arrays.toString(nums));
     }
 }
