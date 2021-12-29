@@ -1,5 +1,7 @@
 package leet.code;
 
+import org.testng.annotations.Test;
+
 import java.util.Arrays;
 
 /**
@@ -42,10 +44,21 @@ public class Quikly {
         quiklySort(nums, i + 1, right);
     }
 
+    //输出九九乘法表
+    @Test
+    public static void jiu() {
+        for (int i = 1; i <= 9; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + "*" + i + "=" + j * i + "\t");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         int[] nums = {1, 543, 32, 32, 12, 2, 3, 4, 5, 678998, 788};
 //        bobble(nums);
-        quiklySort(nums,0,nums.length-1);
+        quiklySort(nums, 0, nums.length - 1);
         System.out.println(Arrays.toString(nums));
     }
 }
