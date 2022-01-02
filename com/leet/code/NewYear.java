@@ -35,7 +35,7 @@ public class NewYear {
     }
 
     //kuai
-    public static void qui(int[] nums, int left, int right) {
+    public static synchronized void qui(int[] nums, int left, int right) {
         if (left > right) return;
         int i = left;
         int j = right;

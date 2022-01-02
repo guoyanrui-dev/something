@@ -57,5 +57,6 @@ public class Some {
         int[] nums = {21, 43, 3, 657, 67, 8, 32, 8, 9, 9765, 654, 43436};
         paixu(nums, 0, nums.length - 1);
         System.out.println(Arrays.toString(nums));
+
     }
 }
