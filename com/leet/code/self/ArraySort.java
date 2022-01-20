@@ -1,5 +1,11 @@
 package leet.code.self;
 
+import org.testng.annotations.Test;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -85,5 +91,21 @@ public class ArraySort {
         quik(nums, 0, nums.length - 1);
         System.out.println(Arrays.toString(nums));
 
+    }
+
+    @Test
+    public void writeSomething() throws IOException {
+        FileWriter fileWriter = new FileWriter("data\\test.csv", true);
+        fileWriter.write("\r2022年1月20号写入这行文字");
+        fileWriter.close();
+    }
+
+    @Test
+    public void read() throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("data\\test.csv"));
+        String str;
+        while ((str = bufferedReader.readLine()) != null) {
+            System.out.println(str);
+        }
     }
 }
