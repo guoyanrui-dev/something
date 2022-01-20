@@ -107,5 +107,6 @@ public class ArraySort {
         while ((str = bufferedReader.readLine()) != null) {
             System.out.println(str);
         }
+        bufferedReader.close();
     }
 }
