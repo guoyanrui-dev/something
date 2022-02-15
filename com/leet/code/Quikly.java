@@ -76,6 +76,21 @@ public class Quikly {
         }
     }
 
+    //二分查找
+    public static int erfen(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left <= right) {
+            int mid = (right + left) / 2;
+            if (nums[mid] == target)
+                return mid;
+            else if (nums[mid] < target)
+                left = mid + 1;
+            else right = mid - 1;
+        }
+        return -1;
+    }
+
     //选择排序
     public static void selectSot(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
@@ -99,6 +114,8 @@ public class Quikly {
 //        quiklySort(nums, 0, nums.length - 1);
 //        selectSort(nums);
         selectSot(nums);
+        int binart = erfen(nums,12);
         System.out.println(Arrays.toString(nums));
+        System.out.println(binart);
     }
 }
