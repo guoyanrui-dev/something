@@ -107,7 +107,6 @@ public class Quikly {
             }
         }
     }
-
     public static void main(String[] args) {
         int[] nums = {1, 543, 32, 32, 12, 2, 3, 4, 5, 678998, 788};
 //        bobble(nums);
